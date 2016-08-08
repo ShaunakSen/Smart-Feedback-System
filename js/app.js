@@ -1,5 +1,6 @@
 var myApp = angular.module('feedbackApp', ['ui.router', 'ngResource'])
     .config(function ($stateProvider, $urlRouterProvider) {
+        //noinspection JSAnnotator
         $stateProvider
             .state('app', {
                 url: '/',
@@ -9,6 +10,14 @@ var myApp = angular.module('feedbackApp', ['ui.router', 'ngResource'])
                     },
                     'content': {
                         templateUrl: 'templates/content.html'
+                    }
+                }
+            })
+            .state('app.register', {
+                url: 'register',
+                views: {
+                    'content@': {
+                        templateUrl: 'templates/register.html'
                     }
                 }
             })
